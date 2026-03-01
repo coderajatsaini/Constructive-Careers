@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Constructive Reach Careers</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7f6;
+}
+
+header {
+  background: #1f2d3d;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+header p {
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #777;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Constructive Reach</h1>
+<p>Build Your Career With Us</p>
+</header>
+
+<div class="container">
+
+<form name="careers" method="POST" data-netlify="true" enctype="multipart/form-data">
+
+<input type="hidden" name="form-name" value="careers">
+
+<label>Full Name</label>
+<input type="text" name="Full Name" required>
+
+<label>Email Address</label>
+<input type="email" name="Email" required>
+
+<label>Phone Number</label>
+<input type="text" name="Phone" required>
+
+<label>Expected Salary (Monthly)</label>
+<input type="text" name="Salary" required>
+
+<label>Upload Resume (PDF/DOC)</label>
+<input type="file" name="Resume" required>
+
+<label>Why do you want to join us?</label>
+<textarea name="Message" rows="4"></textarea>
+
+<button type="submit">Submit Application</button>
+
+</form>
+
+</div>
+
+<footer>
+© 2026 Constructive Reach. All rights reserved.
+</footer>
+
+</body>
+</html>
