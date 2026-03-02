@@ -6,15 +6,19 @@
     <title>Careers | Constructive Reach</title>
     <style>
         :root { 
-            --primary: #00A896; /* Logo Teal */
-            --secondary: #028090; /* Deep Sea Blue */
-            --accent: #05668D; /* Logo Navy */
-            --bg-gradient: linear-gradient(135deg, #00A896 0%, #028090 50%, #05668D 100%);
+            --primary: #00A896; 
+            --secondary: #028090; 
+            --accent: #05668D; 
+            --white: #ffffff;
         }
         
         body { 
             font-family: 'Inter', system-ui, -apple-system, sans-serif; 
-            background: var(--bg-gradient);
+            /* BACKGROUND: Professional Traffic Data Industry Overlay */
+            background: linear-gradient(rgba(5, 102, 141, 0.8), rgba(0, 168, 150, 0.8)), 
+                        url('https://images.unsplash.com/photo-1449156001931-82992a47d060?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
             background-attachment: fixed;
             margin: 0; 
             padding: 20px; 
@@ -27,19 +31,27 @@
         .container { 
             max-width: 650px; 
             margin: auto; 
-            background: rgba(255, 255, 255, 0.92); 
-            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.94); 
+            backdrop-filter: blur(15px);
             padding: 40px; 
             border-radius: 28px; 
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); 
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.3); 
+            border: 1px solid rgba(255, 255, 255, 0.4);
         }
 
         .logo-box { text-align: center; margin-bottom: 25px; }
-        .logo-box img { max-width: 200px; height: auto; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1)); }
+        
+        .logo-box img { 
+            max-width: 220px; 
+            height: auto; 
+            filter: drop-shadow(0 0 12px rgba(255,255,255,0.6));
+            background: rgba(255, 255, 255, 0.4); 
+            padding: 12px;
+            border-radius: 20px;
+        }
         
         h1 { margin: 0; font-size: 26px; color: var(--accent); text-align: center; font-weight: 800; letter-spacing: -0.5px; }
-        p.subtitle { text-align: center; color: #64748b; margin-top: 5px; margin-bottom: 30px; font-weight: 500; }
+        p.subtitle { text-align: center; color: #475569; margin-top: 5px; margin-bottom: 30px; font-weight: 600; }
 
         .form-group { margin-bottom: 22px; }
         label { display: block; font-weight: 700; margin-bottom: 8px; font-size: 13px; color: var(--secondary); text-transform: uppercase; letter-spacing: 0.5px; }
@@ -47,7 +59,7 @@
         input, select, textarea { 
             width: 100%; padding: 14px; border: 2px solid #e2e8f0; border-radius: 14px; 
             font-size: 16px; transition: all 0.3s ease; box-sizing: border-box;
-            background: rgba(248, 250, 252, 0.8);
+            background: rgba(248, 250, 252, 0.9);
         }
 
         input:focus, select:focus, textarea:focus { 
@@ -71,7 +83,7 @@
             box-shadow: 0 20px 25px -5px rgba(0, 168, 150, 0.5);
         }
 
-        footer { text-align: center; padding: 30px; font-size: 13px; color: white; margin-top: auto; font-weight: 600; }
+        footer { text-align: center; padding: 30px; font-size: 13px; color: white; margin-top: auto; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
 
         @media (max-width: 500px) { .grid { grid-template-columns: 1fr; } .container { padding: 30px 20px; } }
     </style>
@@ -80,10 +92,10 @@
 
 <div class="container">
     <div class="logo-box">
-        <img src="logo.png" alt="Constructive Reach Logo">
+        <img src="1772467311311.png" alt="Constructive Reach Logo">
     </div>
     <h1>Constructive Reach</h1>
-    <p class="subtitle">Candidate Information Portal</p>
+    <p class="subtitle">Traffic Data Analysis Portal</p>
 
     <form name="candidate_application" method="POST" data-netlify="true" enctype="multipart/form-data">
         <input type="hidden" name="form-name" value="candidate_application">
@@ -101,7 +113,7 @@
 
         <div class="form-group">
             <label>Phone Number</label>
-            <input type="tel" name="phone" placeholder="+123..." required>
+            <input type="tel" name="phone" placeholder="+1..." required>
         </div>
 
         <div class="grid">
@@ -114,20 +126,20 @@
                 </select>
             </div>
             <div class="form-group">
-                <label>Monthly Salary Expectation</label>
+                <label>Expected Monthly Salary</label>
                 <input type="text" name="salary" placeholder="e.g. $5000" required>
             </div>
         </div>
 
         <div class="form-group">
-            <label id="fileLabel">Upload Resume (PDF or Word - Max 10MB)</label>
+            <label id="fileLabel">Upload Resume (PDF/Word - Max 10MB)</label>
             <input type="file" name="resume" id="resume" accept=".pdf,.doc,.docx" required>
-            <p id="sizeError" style="color: #e74c3c; font-size: 12px; display: none; margin-top: 5px;">File is too large! Please select a file under 10MB.</p>
+            <p id="sizeError" style="color: #e74c3c; font-size: 12px; display: none; margin-top: 5px;">File is too large! Max size is 10MB.</p>
         </div>
 
         <div class="form-group">
-            <label>Cover Letter / Additional Info</label>
-            <textarea name="message" rows="4" placeholder="Tell us why you are a good fit..."></textarea>
+            <label>Cover Letter / Notes</label>
+            <textarea name="message" rows="4" placeholder="Tell us about your background..."></textarea>
         </div>
 
         <button type="submit" class="btn-submit" id="submitBtn">Submit Application</button>
@@ -153,7 +165,7 @@
         };
 
         form.onsubmit = function() {
-            btn.innerHTML = "🚀 Uploading Securely...";
+            btn.innerHTML = "🚀 Uploading Data...";
             btn.style.background = "#10b981";
             btn.style.cursor = "not-allowed";
         };
@@ -161,7 +173,7 @@
 </div>
 
 <footer>
-    © 2026 Constructive Reach. Professional Recruitment Services.
+    © 2026 Constructive Reach. Providing Traffic Intelligence Solutions.
 </footer>
 
 </body>
