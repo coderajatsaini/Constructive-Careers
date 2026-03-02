@@ -93,13 +93,18 @@
             <textarea name="message" rows="4" placeholder="Tell us why you are a good fit..."></textarea>
         </div>
 
-        <button type="submit" class="btn-submit">Submit Application</button>
+        <button type="submit" class="btn-submit" id="submitBtn">Submit Application</button>
     </form>
-    </div>
 
-<footer>
-    © 2026 Constructive Reach. Professional Recruitment Services.
-</footer>
+    <script>
+      const form = document.querySelector('form');
+      const btn = document.querySelector('#submitBtn');
 
-</body>
-</html>
+      form.onsubmit = function() {
+        btn.innerHTML = "Sending... Please wait";
+        btn.style.opacity = "0.7";
+        btn.style.cursor = "not-allowed";
+      };
+    </script>
+</div>
+
