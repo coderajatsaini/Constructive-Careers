@@ -5,25 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Careers | Constructive Reach</title>
     <style>
-        :root { --primary: #2563eb; --dark: #1e293b; --bg: #f8fafc; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--dark); margin: 0; padding: 20px; display: flex; flex-direction: column; min-height: 100vh; }
-        .container { max-width: 650px; margin: auto; background: white; padding: 40px; border-radius: 16px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
-        h1 { margin-top: 0; font-size: 24px; color: var(--primary); text-align: center; }
-        p.subtitle { text-align: center; color: #64748b; margin-bottom: 30px; }
-        .form-group { margin-bottom: 20px; }
-        label { display: block; font-weight: 600; margin-bottom: 8px; font-size: 14px; }
-        input, select, textarea { width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 16px; transition: all 0.2s; box-sizing: border-box; }
-        input:focus { outline: none; border-color: var(--primary); ring: 2px solid var(--primary); }
+        :root { 
+            --primary: #00A896; /* Logo Teal */
+            --secondary: #028090; /* Deep Sea Blue */
+            --accent: #05668D; /* Logo Navy */
+            --bg-gradient: linear-gradient(135deg, #00A896 0%, #028090 50%, #05668D 100%);
+        }
+        
+        body { 
+            font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            margin: 0; 
+            padding: 20px; 
+            display: flex; 
+            flex-direction: column; 
+            min-height: 100vh; 
+            color: #1e293b;
+        }
+        
+        .container { 
+            max-width: 650px; 
+            margin: auto; 
+            background: rgba(255, 255, 255, 0.92); 
+            backdrop-filter: blur(12px);
+            padding: 40px; 
+            border-radius: 28px; 
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); 
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .logo-box { text-align: center; margin-bottom: 25px; }
+        .logo-box img { max-width: 200px; height: auto; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1)); }
+        
+        h1 { margin: 0; font-size: 26px; color: var(--accent); text-align: center; font-weight: 800; letter-spacing: -0.5px; }
+        p.subtitle { text-align: center; color: #64748b; margin-top: 5px; margin-bottom: 30px; font-weight: 500; }
+
+        .form-group { margin-bottom: 22px; }
+        label { display: block; font-weight: 700; margin-bottom: 8px; font-size: 13px; color: var(--secondary); text-transform: uppercase; letter-spacing: 0.5px; }
+        
+        input, select, textarea { 
+            width: 100%; padding: 14px; border: 2px solid #e2e8f0; border-radius: 14px; 
+            font-size: 16px; transition: all 0.3s ease; box-sizing: border-box;
+            background: rgba(248, 250, 252, 0.8);
+        }
+
+        input:focus, select:focus, textarea:focus { 
+            outline: none; border-color: var(--primary); 
+            background: white;
+            box-shadow: 0 0 0 4px rgba(0, 168, 150, 0.15);
+        }
+
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .btn-submit { background: var(--primary); color: white; border: none; padding: 16px; width: 100%; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 16px; margin-top: 10px; transition: opacity 0.2s; }
-        .btn-submit:hover { opacity: 0.9; }
-        footer { text-align: center; padding: 20px; font-size: 13px; color: #94a3b8; margin-top: auto; }
-        @media (max-width: 500px) { .grid { grid-template-columns: 1fr; } }
+
+        .btn-submit { 
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white; border: none; padding: 18px; width: 100%; border-radius: 14px; 
+            font-weight: 700; cursor: pointer; font-size: 17px; margin-top: 15px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 20px -5px rgba(0, 168, 150, 0.4);
+        }
+        
+        .btn-submit:hover { 
+            transform: translateY(-3px);
+            box-shadow: 0 20px 25px -5px rgba(0, 168, 150, 0.5);
+        }
+
+        footer { text-align: center; padding: 30px; font-size: 13px; color: white; margin-top: auto; font-weight: 600; }
+
+        @media (max-width: 500px) { .grid { grid-template-columns: 1fr; } .container { padding: 30px 20px; } }
     </style>
 </head>
 <body>
 
 <div class="container">
+    <div class="logo-box">
+        <img src="logo.png" alt="Constructive Reach Logo">
+    </div>
     <h1>Constructive Reach</h1>
     <p class="subtitle">Candidate Information Portal</p>
 
@@ -95,8 +153,8 @@
         };
 
         form.onsubmit = function() {
-            btn.innerHTML = "🚀 Fast Uploading... Please wait";
-            btn.style.background = "#2ecc71";
+            btn.innerHTML = "🚀 Uploading Securely...";
+            btn.style.background = "#10b981";
             btn.style.cursor = "not-allowed";
         };
     </script>
