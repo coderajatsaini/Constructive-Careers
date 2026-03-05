@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,63 +9,48 @@
             --primary: #00A896; 
             --secondary: #028090; 
             --accent: #05668D; 
-            --white: #ffffff;
         }
         
         body { 
-            font-family: 'Inter', system-ui, -apple-system, sans-serif; 
-            /* BACKGROUND: Professional Traffic Data Industry Overlay */
+            font-family: 'Inter', sans-serif; 
+            /* High-quality Traffic Data Background */
             background: linear-gradient(rgba(5, 102, 141, 0.8), rgba(0, 168, 150, 0.8)), 
                         url('https://images.unsplash.com/photo-1449156001931-82992a47d060?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            margin: 0; 
-            padding: 20px; 
-            display: flex; 
-            flex-direction: column; 
-            min-height: 100vh; 
-            color: #1e293b;
+            margin: 0; padding: 20px; display: flex; flex-direction: column; min-height: 100vh; 
         }
         
         .container { 
-            max-width: 650px; 
-            margin: auto; 
-            background: rgba(255, 255, 255, 0.94); 
-            backdrop-filter: blur(15px);
-            padding: 40px; 
-            border-radius: 28px; 
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.3); 
-            border: 1px solid rgba(255, 255, 255, 0.4);
+            max-width: 650px; margin: auto; background: rgba(255, 255, 255, 0.94); 
+            backdrop-filter: blur(15px); padding: 40px; border-radius: 28px; 
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.3); border: 1px solid rgba(255, 255, 255, 0.4);
         }
 
         .logo-box { text-align: center; margin-bottom: 25px; }
-        
         .logo-box img { 
             max-width: 220px; 
             height: auto; 
-            filter: drop-shadow(0 0 12px rgba(255,255,255,0.6));
-            background: rgba(255, 255, 255, 0.4); 
-            padding: 12px;
-            border-radius: 20px;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 15px;
         }
         
-        h1 { margin: 0; font-size: 26px; color: var(--accent); text-align: center; font-weight: 800; letter-spacing: -0.5px; }
+        h1 { margin: 0; font-size: 26px; color: var(--accent); text-align: center; font-weight: 800; }
         p.subtitle { text-align: center; color: #475569; margin-top: 5px; margin-bottom: 30px; font-weight: 600; }
 
         .form-group { margin-bottom: 22px; }
-        label { display: block; font-weight: 700; margin-bottom: 8px; font-size: 13px; color: var(--secondary); text-transform: uppercase; letter-spacing: 0.5px; }
+        label { display: block; font-weight: 700; margin-bottom: 8px; font-size: 13px; color: var(--secondary); text-transform: uppercase; }
         
         input, select, textarea { 
             width: 100%; padding: 14px; border: 2px solid #e2e8f0; border-radius: 14px; 
-            font-size: 16px; transition: all 0.3s ease; box-sizing: border-box;
-            background: rgba(248, 250, 252, 0.9);
+            font-size: 16px; transition: all 0.3s ease; box-sizing: border-box; background: rgba(248, 250, 252, 0.9);
         }
 
         input:focus, select:focus, textarea:focus { 
-            outline: none; border-color: var(--primary); 
-            background: white;
-            box-shadow: 0 0 0 4px rgba(0, 168, 150, 0.15);
+            outline: none; border-color: var(--primary); background: white; box-shadow: 0 0 0 4px rgba(0, 168, 150, 0.15);
         }
 
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -73,18 +58,11 @@
         .btn-submit { 
             background: linear-gradient(to right, var(--primary), var(--secondary));
             color: white; border: none; padding: 18px; width: 100%; border-radius: 14px; 
-            font-weight: 700; cursor: pointer; font-size: 17px; margin-top: 15px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 10px 20px -5px rgba(0, 168, 150, 0.4);
+            font-weight: 700; cursor: pointer; font-size: 17px; margin-top: 15px; transition: all 0.4s ease;
         }
         
-        .btn-submit:hover { 
-            transform: translateY(-3px);
-            box-shadow: 0 20px 25px -5px rgba(0, 168, 150, 0.5);
-        }
-
-        footer { text-align: center; padding: 30px; font-size: 13px; color: white; margin-top: auto; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
-
+        .btn-submit:hover { transform: translateY(-3px); box-shadow: 0 20px 25px -5px rgba(0, 168, 150, 0.5); }
+        footer { text-align: center; padding: 30px; font-size: 13px; color: white; margin-top: auto; font-weight: 600; }
         @media (max-width: 500px) { .grid { grid-template-columns: 1fr; } .container { padding: 30px 20px; } }
     </style>
 </head>
@@ -92,7 +70,7 @@
 
 <div class="container">
     <div class="logo-box">
-        <img src="1772467311311.png" alt="Constructive Reach Logo">
+        <img src="logo.png" alt="Constructive Reach Logo">
     </div>
     <h1>Constructive Reach</h1>
     <p class="subtitle">Traffic Data Analysis Portal</p>
@@ -103,7 +81,7 @@
         <div class="grid">
             <div class="form-group">
                 <label>Full Name</label>
-                <input type="text" name="full_name" placeholder="Enter name" required>
+                <input type="text" name="full_name" placeholder="Name" required>
             </div>
             <div class="form-group">
                 <label>Email Address</label>
@@ -118,7 +96,7 @@
 
         <div class="grid">
             <div class="form-group">
-                <label>Experience Level</label>
+                <label>Experience</label>
                 <select name="experience" required>
                     <option value="entry">0-2 Years</option>
                     <option value="mid">3-5 Years</option>
@@ -126,20 +104,20 @@
                 </select>
             </div>
             <div class="form-group">
-                <label>Expected Monthly Salary</label>
+                <label>Monthly Salary</label>
                 <input type="text" name="salary" placeholder="e.g. $5000" required>
             </div>
         </div>
 
         <div class="form-group">
-            <label id="fileLabel">Upload Resume (PDF/Word - Max 10MB)</label>
+            <label id="fileLabel">Upload Resume (Max 10MB)</label>
             <input type="file" name="resume" id="resume" accept=".pdf,.doc,.docx" required>
-            <p id="sizeError" style="color: #e74c3c; font-size: 12px; display: none; margin-top: 5px;">File is too large! Max size is 10MB.</p>
+            <p id="sizeError" style="color: #e74c3c; font-size: 12px; display: none; margin-top: 5px;">File too large! Max 10MB.</p>
         </div>
 
         <div class="form-group">
-            <label>Cover Letter / Notes</label>
-            <textarea name="message" rows="4" placeholder="Tell us about your background..."></textarea>
+            <label>Notes</label>
+            <textarea name="message" rows="4" placeholder="Additional details..."></textarea>
         </div>
 
         <button type="submit" class="btn-submit" id="submitBtn">Submit Application</button>
@@ -165,7 +143,7 @@
         };
 
         form.onsubmit = function() {
-            btn.innerHTML = "🚀 Uploading Data...";
+            btn.innerHTML = "🚀 Uploading...";
             btn.style.background = "#10b981";
             btn.style.cursor = "not-allowed";
         };
@@ -173,7 +151,7 @@
 </div>
 
 <footer>
-    © 2026 Constructive Reach. Providing Traffic Intelligence Solutions.
+    © 2026 Constructive Reach. Professional Traffic Intelligence.
 </footer>
 
 </body>
