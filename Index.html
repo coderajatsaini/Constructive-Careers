@@ -28,15 +28,12 @@
             box-shadow: 0 25px 50px -12px rgba(0,0,0,0.3); border: 1px solid rgba(255, 255, 255, 0.4);
         }
 
-        /* LOGO STYLE: Small, Circular, and Professional */
+        /* FIXED LOGO: Professional Circular Style */
         .logo-box { text-align: center; margin-bottom: 25px; }
         .logo-box img { 
-            width: 100px; 
-            height: 100px; 
-            object-fit: cover; 
-            border-radius: 50%; 
-            border: 3px solid var(--primary);
-            background: white;
+            width: 100px; height: 100px; 
+            object-fit: cover; border-radius: 50%; 
+            border: 3px solid var(--primary); background: white;
             filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
         }
         
@@ -82,43 +79,43 @@
         <div class="grid">
             <div class="form-group">
                 <label>Full Name</label>
-                <input type="text" name="full_name" placeholder="Enter name" required>
+                <input type="text" name="Name" placeholder="Enter name" required>
             </div>
             <div class="form-group">
                 <label>Email Address</label>
-                <input type="email" name="email" placeholder="email@domain.com" required>
+                <input type="email" name="Email" placeholder="email@domain.com" required>
             </div>
         </div>
 
         <div class="form-group">
             <label>Phone Number</label>
-            <input type="tel" name="phone" placeholder="+1..." required>
+            <input type="tel" name="Phone" placeholder="+1..." required>
         </div>
 
         <div class="grid">
             <div class="form-group">
-                <label>Experience Level</label>
-                <select name="experience" required>
-                    <option value="entry">0-2 Years</option>
-                    <option value="mid">3-5 Years</option>
-                    <option value="senior">5+ Years</option>
+                <label>Experience</label>
+                <select name="Experience" required>
+                    <option value="0-2">0-2 Years</option>
+                    <option value="3-5">3-5 Years</option>
+                    <option value="5plus">5+ Years</option>
                 </select>
             </div>
             <div class="form-group">
-                <label>Expected Monthly Salary</label>
-                <input type="text" name="salary" placeholder="e.g. $5000" required>
+                <label>Monthly Salary</label>
+                <input type="text" name="Salary" placeholder="e.g. $5000" required>
             </div>
         </div>
 
         <div class="form-group">
-            <label id="fileLabel">Upload Resume (PDF/Word - Max 10MB)</label>
-            <input type="file" name="resume" id="resume" accept=".pdf,.doc,.docx" required>
+            <label id="fileLabel">Upload Resume / Portfolio (Any File - Max 10MB)</label>
+            <input type="file" name="upload" id="resume" required>
             <p id="sizeError" style="color: #e74c3c; font-size: 12px; display: none; margin-top: 5px;">File is too large! Max 10MB.</p>
         </div>
 
         <div class="form-group">
             <label>Cover Letter / Additional Info</label>
-            <textarea name="message" rows="4" placeholder="Tell us why you are a good fit..."></textarea>
+            <textarea name="Message" rows="4" placeholder="Tell us why you are a good fit..."></textarea>
         </div>
 
         <button type="submit" class="btn-submit" id="submitBtn">Submit Application</button>
@@ -130,7 +127,6 @@
         const sizeError = document.querySelector('#sizeError');
 
         fileInput.onchange = function() {
-            // Check for 10MB limit
             if(this.files[0].size > 10485760) {
                 sizeError.style.display = "block";
                 this.value = "";
@@ -143,7 +139,6 @@
             }
         };
 
-        // Formspree Button Text Update
         const form = document.querySelector('form');
         form.onsubmit = function() {
             btn.innerHTML = "🚀 Sending Securely...";
@@ -158,3 +153,4 @@
 
 </body>
 </html>
+
